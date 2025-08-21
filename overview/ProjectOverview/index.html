@@ -132,28 +132,35 @@ Using templates with pre-defined schema and endpoint scripts (e.g., Google Apps 
 <p>By cutting manual work, templates lower the risk of formatting errors that can disrupt workflows or skew results. With a dependable foundation in place, project teams can focus on adapting templates to specific needs rather than rebuilding basics each time.</p>
 <p><strong>Estimated Timeline</strong>
 ~1 week</p>
-<p><strong>Realistic Expectations</strong><br />
-- Templates will evolve as more use cases appear.<br />
-- Full coverage of all input variations may not be possible initially.  </p>
+<p><strong>Realistic Expectations</strong>  </p>
+<ul>
+<li>Templates will evolve as more use cases appear.  </li>
+<li>Full coverage of all input variations may not be possible.  </li>
+</ul>
 <hr />
 <h2 id="4-automating-the-etl-pipeline-with-hooks-for-live-data-code-updates">4. Automating the ETL Pipeline with Hooks for Live Data &amp; Code Updates<a class="headerlink" href="#4-automating-the-etl-pipeline-with-hooks-for-live-data-code-updates" title="Permanent link">&para;</a></h2>
 <p><strong>Rationale</strong><br />
-Automation ensures reliability and timeliness of data updates while minimizing manual intervention.  </p>
+Automating the ETL pipeline with hooks allows key setup steps to happen automatically whenever important files are created or updated. For example, instead of manually syncing spreadsheets, scripts, or cloud services, the system can run commands in the background to keep everything aligned. Today, this means tools like Google’s clasp can sync Apps Scripts and spreadsheet schema automatically. In the future, the same approach could extend to calling APIs in Mendix, managing AWS processes, or other cloud services. This reduces manual work, lowers the chance of errors, and ensures projects stay consistent as they grow.</p>
+<p>We can also ensure that when bugs are found in any core functions, the modifications can be propagated to any other projects that rely on the same code, templates, or supplementary data. This also empowers more members of Kadence to fix issues in any given project. If a simple configuration file value is off, or a minro fix can be done by a project manager, the automatic pipeline will take in the changes and update projects. While this will need to be approached with some degree of caution to avoid unintentional edits, it will still allow PMs to make quick minor changes without forcing the data team to pivot between numerous tasks as often.</p>
 <p><strong>Estimated Timeline</strong>
 ~2 weeks</p>
 <p><strong>Realistic Expectations</strong><br />
-- Automation will cover the majority of standard workflows.<br />
-- Exceptions may require monitoring or manual fixes.<br />
-- Hooks must be thoroughly tested to avoid silent failures.  </p>
+  * Automation will cover the majority of standard workflows.<br />
+  * Exceptions may require monitoring or manual fixes.<br />
+  * Hooks must be thoroughly tested to avoid silent failures.<br />
+  * We will need to carefully consider how to automate updates in the event that a project is sufficiently unique that only core components should be updated automatically.</p>
 <hr />
 <h2 id="5-creating-unit-tests">5. Creating Unit Tests<a class="headerlink" href="#5-creating-unit-tests" title="Permanent link">&para;</a></h2>
 <p><strong>Rationale</strong><br />
-Unit tests improve reliability, catch regressions, and support continuous integration.  </p>
+Unit testing is the practice of checking small pieces of code in isolation to confirm they work as expected. We can create inputs to a portion of code where we know the expected outputs, and compare the results to validate the codes ability to perform as expected. By testing these building blocks individually, we can catch problems early before they affect larger workflows.</p>
+<p>This approach makes debugging faster, since errors can be traced to a specific component instead of searching through an entire project. It also helps ensure that updates or changes to the code don’t accidentally break existing functionality. Ultimately, unit testing provides greater confidence that the system is reliable, reduces rework, and saves time when maintaining or expanding projects. </p>
+<p>It also is not an exact process, and can require some time to come up with the best unit tests for cover as many use cases and edges cases as possible. It is often an overlooked part of creating good code, but is a gold standard of good IT products. It is often used in conjunction with a dedicated development compute environment to ensure fault tolerance for the end-user. We do not have a development environment at Kadence, but this would be an important step if we decide to incorporate such a process into our workflow.</p>
 <p><strong>Estimated Timeline</strong>
 ~1 Month</p>
 <p><strong>Realistic Expectations</strong><br />
-- Full test coverage is unrealistic at the start; focus will be on critical paths.<br />
-- Test suite will expand over time as features stabilize.  </p>
+  * Full test coverage is unrealistic at the start; focus will be on critical paths.<br />
+  * Test suite will expand over time as features stabilize.<br />
+  * This will not </p>
 <hr />
 <h1 id="persistent-issues">Persistent Issues<a class="headerlink" href="#persistent-issues" title="Permanent link">&para;</a></h1>
 <p>Despite the improvements above, some issues will likely persist due to data quality issues, the organizational structure, and lack of a standard software development life cycle (SDLC).</p>
