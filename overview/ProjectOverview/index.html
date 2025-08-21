@@ -151,10 +151,11 @@ Unit tests improve reliability, catch regressions, and support continuous integr
 <h3 id="human-data-entry-format-drift">Human Data Entry &amp; Format Drift<a class="headerlink" href="#human-data-entry-format-drift" title="Permanent link">&para;</a></h3>
 <p>Manual inputs often lead to inconsistencies, such as typos, missing values, or incorrect formats, which in turn break automated processes that expect standardized data. Unique formatting for specific client requests can cause similar issues, as back-end logic may require a programmatic approach to how data is fed into the pipeline.</p>
 <p>Over time, even small variations—like different date formats, naming conventions, or field structures—compound into larger integrity issues that are costly to detect and resolve. These errors increase the likelihood of downstream failures in pipelines, make debugging more difficult, and reduce confidence in analytics. Without strong controls or a more generous development lifecycle, documentation and validation can suffer.</p>
-<ul>
-<li><strong>Performance Bottlenecks</strong>: Some automation may still require optimization for large-scale data.  </li>
-<li><strong>Human Intervention</strong>: Certain validation steps may always need manual oversight.  </li>
-</ul>
+<p>We note that the proposed move to Mendix will help reduce the impact of this category of error, as input is managed through a front-end application that can standardize the process of ingesting data.</p>
+<h2 id="organizational-structure">Organizational Structure<a class="headerlink" href="#organizational-structure" title="Permanent link">&para;</a></h2>
+<p>The current organizational structure at Kadence for standing up a project, providing technical support, and managing needs does not use more traditional methods of large successful technology companies. This is not in and of itself an issue, but it does make it difficult to compare the relative effectiveness when you consider the trade offs.</p>
+<p>Companies with slightly larger data teams can organize themselves into a variety of formats such as Agile, Kanban, or Scrumban. This provides clearer roles and support for safeguarding the client from seeing errors. For example, the inclusion of a project manager can help with communicating between technical and domain experts, avoiding confusion in feature development. They can also provide a clear vision on the most efficient roadmap to hit goals in time.</p>
+<p>Another important team member not present in the Kadence team is a trained quality assurance professional. Their training in how to best discover flaws and vulnerabilities, as well as focus debugging efforts, is a gmae changer for many successful companies. Errors are inherent to coding, and it takes a significant amount of time and training to manage this well, and even a full-stack developer can miss bugs as they need to focus on many moving pieces at once.</p>
 <hr />
 <h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h1>
 <p>Lorem Ipsum.</p>
