@@ -112,12 +112,18 @@ Object-oriented design (OOD) makes code modular, which brings several key advant
 <hr />
 <h2 id="2-configuration-driven-project-creation">2. Configuration-Driven Project Creation<a class="headerlink" href="#2-configuration-driven-project-creation" title="Permanent link">&para;</a></h2>
 <p><strong>Rationale</strong><br />
-Shifting from hard-coded logic to configuration files allows new projects to be created or updated with minimal developer intervention.  </p>
+Configuration-driven development is a design approach that enables faster project setup by reusing the same core code, adjusting only those configuration files needed to handle new use cases. Copying and modifying a configuration file is also less error-prone than copying and altering code directly.</p>
+<p>This approach reduces the chance of introducing bugs, since most of the underlying code remains untouched. Errors are more often tied to configuration inputs, which are easier to identify and fix, even for non-technical users.</p>
+<p>It also helps keep the codebase lean and consistent. Managing one well-tested codebase with multiple configuration files is simpler than juggling multiple nearly identical codebases, which can lead to conflicts, versioning issues, and redundant methods.</p>
+<p>Finally, configuration files provide a bridge between developers and domain experts. Because they are easier to read and share, non-technical staff can review and discuss them without needing to understand the underlying code.</p>
 <p><strong>Estimated Timeline</strong>
 ~2 weeks</p>
-<p><strong>Realistic Expectations</strong><br />
-- Reduces manual coding for project setup.<br />
-- Some edge cases will still require custom development.  </p>
+<p><strong>Realistic Expectations</strong>  </p>
+<ul>
+<li>Reduces manual coding for project setup.  </li>
+<li>Some edge cases will still require custom development.  </li>
+<li>We plan to consolidate projects into one repository, but this method will mean a lot of project specific sub-folders with multiple files for each project.</li>
+</ul>
 <hr />
 <h2 id="3-creatingupdating-templates-for-raw-data-schema-and-configuration-files">3. Creating/Updating Templates for Raw Data Schema and Configuration Files<a class="headerlink" href="#3-creatingupdating-templates-for-raw-data-schema-and-configuration-files" title="Permanent link">&para;</a></h2>
 <p><strong>Rationale</strong><br />
