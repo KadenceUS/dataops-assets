@@ -154,13 +154,13 @@ Automating the ETL pipeline with hooks allows key setup steps to happen automati
 <p><strong>Rationale</strong><br />
 Unit testing is the practice of checking small pieces of code in isolation to confirm they work as expected. We can create inputs to a portion of code where we know the expected outputs, and compare the results to validate the codes ability to perform as expected. By testing these building blocks individually, we can catch problems early before they affect larger workflows.</p>
 <p>This approach makes debugging faster, since errors can be traced to a specific component instead of searching through an entire project. It also helps ensure that updates or changes to the code don’t accidentally break existing functionality. Ultimately, unit testing provides greater confidence that the system is reliable, reduces rework, and saves time when maintaining or expanding projects. </p>
-<p>It also is not an exact process, and can require some time to come up with the best unit tests for cover as many use cases and edges cases as possible. It is often an overlooked part of creating good code, but is a gold standard of good IT products. It is often used in conjunction with a dedicated development compute environment to ensure fault tolerance for the end-user. We do not have a development environment at Kadence, but this would be an important step if we decide to incorporate such a process into our workflow.</p>
+<p>It also is not an exact process, and can require some time to come up with the best unit tests for cover as many use cases and edges cases as possible. It is often an overlooked part of creating good code, but is a gold standard of good IT products. You can use it to prevent poorly written code from ever going live, but automatically running a unit test and only allowed error free code from being deployed. It is often used in conjunction with a dedicated development compute environment to ensure fault tolerance for the end-user. We do not have a development environment at Kadence, but this would be an important step if we decide to incorporate such a process into our workflow.</p>
 <p><strong>Estimated Timeline</strong>
 ~1 Month</p>
 <p><strong>Realistic Expectations</strong><br />
   * Full test coverage is unrealistic at the start; focus will be on critical paths.<br />
   * Test suite will expand over time as features stabilize.<br />
-  * This will not </p>
+  * This will not cover new code quickly. It takes time to develop good unit tests, but it can provide confidence for known processes, and safeguard exisitng projects from small changes causing errors.</p>
 <hr />
 <h1 id="persistent-issues">Persistent Issues<a class="headerlink" href="#persistent-issues" title="Permanent link">&para;</a></h1>
 <p>Despite the improvements above, some issues will likely persist due to data quality issues, the organizational structure, and lack of a standard software development life cycle (SDLC).</p>
@@ -182,11 +182,6 @@ Unit testing is the practice of checking small pieces of code in isolation to co
 <p>By skipping a formal Software Development Life Cycle (SDLC) and exposing data directly to project managers and clients, Kadence increases the risk of errors and inconsistencies. Without structured stages for requirements, design, testing, and validation, issues like coding bugs, misaligned business logic, or incomplete documentation are more likely. While this approach accelerates delivery, it reduces safeguards, making debugging, maintenance, and reliable feature rollout more challenging.</p>
 <p>Live rollout also means that requests from project managers or clients may be incorporated without proper design or scoping. This can lead to overly specific code patches that work for a single feature but introduce unintended issues when edge cases arise. It also complicates code reuse across projects, resulting in highly divergent codebases.</p>
 <p>Many of these risks can be mitigated through proper scoping and design during an SDLC. In practice, a balance must be struck between SDLC rigor and rapid delivery. The transition to a new, modular codebase presents an opportunity to streamline SDLC processes, enabling faster development while incorporating the necessary safeguards when lead time allows.</p>
-<hr />
-<h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h1>
-<p>Lorem Ipsum.</p>
-<h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
-<p>[List relevant technical documentation, standards, or prior work here.]</p>
               
             </div>
           </div><footer>
