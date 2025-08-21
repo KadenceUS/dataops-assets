@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Schedule Summary Methods - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Schedule Summary Methods";
+        var mkdocs_page_input_path = "references/schedule_summary_methods.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/ProjectOverview/">Project Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Transformation References</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../shared_methods/">Shared Methods</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Schedule Summary Methods</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#clean-data">Clean Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.transform.ScheduleSummaryTransform._clean_merged_data">_clean_merged_data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#merge-calendar-data">Merge Calendar Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.transform.ScheduleSummaryTransform._merge_calendar">_merge_calendar</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#apply-windowing-to-date-data">Apply Windowing to Date Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.transform.ScheduleSummaryTransform._make_windowed_schedule_summary">_make_windowed_schedule_summary</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stash-data-for-write-out">Stash data for write out</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.transform.ScheduleSummaryTransform._stash_data">_stash_data</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Transformation References</li>
+      <li class="breadcrumb-item active">Schedule Summary Methods</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="schedule-summary-methods">Schedule Summary Methods<a class="headerlink" href="#schedule-summary-methods" title="Permanent link">&para;</a></h1>
+<h2 id="clean-data">Clean Data<a class="headerlink" href="#clean-data" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.transform.ScheduleSummaryTransform._clean_merged_data"></a>
+    <div class="doc doc-contents first">
+
+        <p>Clean up a dataframe according to user parameters.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>blacklist_filter</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary of column and blacklisted entries to filter out. Defaults to None.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>mappings</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary of columns and mappings (dict format) to perform on the series. Defaults to None.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>drop_duplicate_cols</code></b>
+                  (<code><span title="list">list</span> / <span title="string">string</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>A string or list of strings of columns to use for subset dropping of duplicates. Defaults to None.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: clean_data
+</code></pre>
+<p><br></p>
+<h2 id="merge-calendar-data">Merge Calendar Data<a class="headerlink" href="#merge-calendar-data" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.transform.ScheduleSummaryTransform._merge_calendar"></a>
+    <div class="doc doc-contents first">
+
+        <p>Merge calendar data into another data source.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>accumulator_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from (this is the dataframe that will have calendar data added to it)
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>var_name</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>&#39;Date&#39;</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>New column name made from the melted calendar. Defaults to 'Date'.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>value_name</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>&#39;Unique ID&#39;</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Value name argument to pass to PD.melt. Defaults to 'Unique ID'.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="TypeError">TypeError</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If the user has references something that is neither a list of dataframes, or a dataframe, raise an error.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: add_calander_data
+</code></pre>
+<p><br></p>
+<h2 id="apply-windowing-to-date-data">Apply Windowing to Date Data<a class="headerlink" href="#apply-windowing-to-date-data" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.transform.ScheduleSummaryTransform._make_windowed_schedule_summary"></a>
+    <div class="doc doc-contents first">
+
+        <p>Make a windowed view of data using a window size in number of days.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>window_size</code></b>
+                  (<code><span title="int">int</span></code>, default:
+                      <code>5</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Number of days to use for windowing. Defaults to 5.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: window_ScheduleSummary
+</code></pre>
+<p><br></p>
+<h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.transform.ScheduleSummaryTransform._stash_data"></a>
+    <div class="doc doc-contents first">
+
+        <p>Store data for load.</p>
+
+
+    </div>
+
+</div><pre><code>Aliases: stash_data
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../shared_methods/" class="btn btn-neutral float-left" title="Shared Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../shared_methods/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
