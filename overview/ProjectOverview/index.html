@@ -93,16 +93,22 @@
 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
 <p>Background on the project, current challenges, and why improvements are necessary.</p>
 <h1 id="project-outline">Project Outline<a class="headerlink" href="#project-outline" title="Permanent link">&para;</a></h1>
-<p>The following goals are presented in order of development priority. Each step includes rationale and realistic expectations.</p>
+<p>The following goals are presented in order of development priority. Each step includes rationale, a rough estimate on development timelines, and realistic expectations.</p>
 <h2 id="1-converting-code-to-object-oriented-structure">1. Converting Code to Object-Oriented Structure<a class="headerlink" href="#1-converting-code-to-object-oriented-structure" title="Permanent link">&para;</a></h2>
 <p><strong>Rationale</strong><br />
-Object-oriented design improves modularity, maintainability, and scalability. It also simplifies future enhancements.  </p>
-<p><strong><em>Include note that we do not have a QA member, so it will take awhile to fully vet this on top of dev and other tasks.</em></strong></p>
+Object-oriented design (OOD) makes code modular, which brings several key advantages. Modular code is easier to reuse across projects, as developers can combine existing components to meet new requirements instead of regularly reinventing the wheel. It is also easier to test and debug, since errors can be isolated within specific objects rather than traced through a long stream of commands. By enforcing clear rules for how data enters and leaves objects, OOD reduces the risk of sweeping code changes when addressing bugs or edge cases.</p>
+<p>OOD also improves collaboration and maintainability. With code organized into clear, well-defined components, developers can work on different parts of a system without interfering with one another. This structure also makes it easier for new team members to understand and contribute, reducing the learning curve and lowering the chance of introducing errors. It also means that creating one clear standard operating procedure (SOP) document much simpler.</p>
+<p>Finally, OOD makes it easier to scale solutions and adapt to new data sources or methods. A single-purpose script might need to be replaced entirely when requirements change, but a modular OOD framework allows incremental adjustments with minimal disruption. Together, these benefits improve reliability, adaptability, and long-term efficiency.</p>
 <p><strong>Estimated Timeline</strong>
 ~1 Month</p>
-<p><strong>Realistic Expectations</strong><br />
-- Requires initial refactoring effort, but codebase stability will improve.<br />
-- May expose existing design flaws that need resolution before progress.  </p>
+<p><strong>Realistic Expectations</strong>  </p>
+<ul>
+<li>Requires upfront refactoring, but improves long-term codebase stability.</li>
+<li>May reveal existing design flaws that must be addressed before progress.</li>
+<li>Involves a learning curve for those new to object-oriented coding.</li>
+<li>Development will take time to ensure minimal disruption and maximum usefulness.</li>
+<li>Carries a significant upfront cost and QA effort, but will save time over the long run.</li>
+</ul>
 <hr />
 <h2 id="2-configuration-driven-project-creation">2. Configuration-Driven Project Creation<a class="headerlink" href="#2-configuration-driven-project-creation" title="Permanent link">&para;</a></h2>
 <p><strong>Rationale</strong><br />
