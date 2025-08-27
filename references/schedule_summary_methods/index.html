@@ -69,12 +69,6 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#custom-method">Custom Method</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.ScheduleSummaryTransform._custom_method">_custom_method</a>
-    </li>
-        </ul>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#stash-data-for-write-out">Stash data for write out</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.ScheduleSummaryTransform._stash_data">_stash_data</a>
@@ -334,69 +328,6 @@
     </div>
 
 </div><pre><code>Aliases: window_ScheduleSummary
-</code></pre>
-<p><br></p>
-<h2 id="custom-method">Custom Method<a class="headerlink" href="#custom-method" title="Permanent link">&para;</a></h2>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<a id="_coreutils.ETL.transform.ScheduleSummaryTransform._custom_method"></a>
-    <div class="doc doc-contents first">
-
-        <p>Use a custom method as a step in the workflow. This is useful for project specific tasks, like in quotas.
-For example, you might call a separate method that does the very project specific work of handling BMI, which
-is not needed for most other projects.</p>
-
-
-<table class="field-list">
-  <colgroup>
-    <col class="field-name" />
-    <col class="field-body" />
-  </colgroup>
-  <tbody valign="top">
-    <tr class="field">
-      <th class="field-name">Parameters:</th>
-      <td class="field-body">
-        <ul class="first simple">
-            <li>
-              <b><code>script_path</code></b>
-                  (<code>(<span title="filepath">filepath</span>, <span title="str">str</span>)</code>)
-              –
-              <div class="doc-md-description">
-                <p>Filepath to the script containing your custom method.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>method_name</code></b>
-                  (<code><span title="str">str</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>Method name in external script to import.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>kwargs</code></b>
-                  (<code><span title="dict">dict</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>A dictionary with the input arguments to custom method.
-                     If a 'load' dictionary is passed, then load data from within the pipeline using the .
-                     For example: kwargs['load'] = {'merged_data_entry':Transformations.2}
-                     would pass the custom method argument 'merged_data_entry' the results from Transformations step 2.</p>
-              </div>
-            </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-    </div>
-
-</div><pre><code>Aliases: custom_function
 </code></pre>
 <p><br></p>
 <h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
