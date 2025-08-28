@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Quotas Methods - My Docs</title>
+    <title>Intake Methods - My Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Quotas Methods";
-        var mkdocs_page_input_path = "references/quotas_methods.md";
+        var mkdocs_page_name = "Intake Methods";
+        var mkdocs_page_input_path = "references/intake_methods.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -51,23 +51,35 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../schedule_summary_methods/">Schedule Summary Methods</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Quotas Methods</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quotas_methods/">Quotas Methods</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intake Methods</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#make-quota-bins">Make Quota Bins</a>
+    <li class="toctree-l2"><a class="reference internal" href="#filter-data-by-date">Filter data by date</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.QuotasTransform._make_quota_bins">_make_quota_bins</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._filter_data_on_datetime">_filter_data_on_datetime</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clean-project-specific-columns">Clean project specific columns</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._prepare_project_cols">_prepare_project_cols</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#find-intake-insertion-row">Find intake insertion row</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._calculate_last_intake_row">_calculate_last_intake_row</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#stash-data-for-write-out">Stash data for write out</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.QuotasTransform._stash_data">_stash_data</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._stash_data">_stash_data</a>
     </li>
         </ul>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../intake_methods/">Intake Methods</a>
                   </li>
               </ul>
       </div>
@@ -85,7 +97,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Transformation References</li>
-      <li class="breadcrumb-item active">Quotas Methods</li>
+      <li class="breadcrumb-item active">Intake Methods</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -94,18 +106,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="quotas-methods">Quotas Methods<a class="headerlink" href="#quotas-methods" title="Permanent link">&para;</a></h1>
-<h2 id="make-quota-bins">Make Quota Bins<a class="headerlink" href="#make-quota-bins" title="Permanent link">&para;</a></h2>
+                <h1 id="intake-methods">Intake Methods<a class="headerlink" href="#intake-methods" title="Permanent link">&para;</a></h1>
+<h2 id="filter-data-by-date">Filter data by date<a class="headerlink" href="#filter-data-by-date" title="Permanent link">&para;</a></h2>
 
 
 <div class="doc doc-object doc-function">
 
 
 
-<a id="_coreutils.ETL.transform.QuotasTransform._make_quota_bins"></a>
+<a id="_coreutils.ETL.transform.IntakeTransform._filter_data_on_datetime"></a>
     <div class="doc doc-contents first">
 
-        <p>Make new binned columns for quotas tabulation. Uses the data_parameters dictionary that is read in as part of general config load in main.py.</p>
+        <p>Filter data on a given data time value. </p>
 
 
 <table class="field-list">
@@ -128,6 +140,26 @@
                     'Transformations.2` would mean to take the results from the second transformation step.</p>
               </div>
             </li>
+            <li>
+              <b><code>filter</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary containing the filter information for date restriction.
+            The expected format is:
+                filter_col (str): Column name to use for filtering. Typically the same as <code>map_date_col</code>.
+                operator (str): String representation of a python logic operator ('==','&lt;',etc.)
+                filter_date (datetime or string*): Date time object or the string 'today', which will infer the current day time object</p>
+              </div>
+            </li>
+            <li>
+              <b><code>map_date_col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Name of the column to add the datetime object to.</p>
+              </div>
+            </li>
         </ul>
       </td>
     </tr>
@@ -136,7 +168,111 @@
 
     </div>
 
-</div><pre><code>Aliases: make_quota_bins
+</div><pre><code>Aliases: filter_by_date
+</code></pre>
+<p><br></p>
+<h2 id="clean-project-specific-columns">Clean project specific columns<a class="headerlink" href="#clean-project-specific-columns" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.IntakeTransform._prepare_project_cols"></a>
+    <div class="doc doc-contents first">
+
+        <p>Perform any method mapping of columns and typecasting before intake analysis.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>type_castings</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary with columns (keys) and data types (values) to try to map to.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: clean_project_cols
+</code></pre>
+<p><br></p>
+<h2 id="find-intake-insertion-row">Find intake insertion row<a class="headerlink" href="#find-intake-insertion-row" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.IntakeTransform._calculate_last_intake_row"></a>
+    <div class="doc doc-contents first">
+
+        <p>Use built-in dataframe methods to infer the last index of valid data in intake so we can insert at the end of the spreadsheet.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>col_subset</code></b>
+                  (<code><span title="list">list</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>List of columns to check for valid entries.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: intake_geometry
 </code></pre>
 <p><br></p>
 <h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
@@ -146,75 +282,11 @@
 
 
 
-<a id="_coreutils.ETL.transform.QuotasTransform._stash_data"></a>
+<a id="_coreutils.ETL.transform.IntakeTransform._stash_data"></a>
     <div class="doc doc-contents first">
 
-        <p>Stash data into parent class instance for load step.</p>
+        <p>Store data for load.</p>
 
-
-<table class="field-list">
-  <colgroup>
-    <col class="field-name" />
-    <col class="field-body" />
-  </colgroup>
-  <tbody valign="top">
-    <tr class="field">
-      <th class="field-name">Parameters:</th>
-      <td class="field-body">
-        <ul class="first simple">
-            <li>
-              <b><code>data_source</code></b>
-                  (<code><span title="string">string</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>String that denotes where to pull data from.
-                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
-                    'Transformations.2` would mean to take the results from the second transformation step.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>destination</code></b>
-                  (<code><span title="string">string</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>Destination sheet name.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>source_col</code></b>
-                  (<code><span title="str">str</span></code>, default:
-                      <code>&#39;source&#39;</code>
-)
-              –
-              <div class="doc-md-description">
-                <p>Column to look for source spreadsheet information. Loops over these sources to send to the right spreadsheet. Defaults to 'source'.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>source_whitelist</code></b>
-                  (<code><span title="list">list</span></code>, default:
-                      <code>None</code>
-)
-              –
-              <div class="doc-md-description">
-                <p>Optional list of spreadsheets to stash according to source_col.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>endpoint</code></b>
-                  (<code><span title="str">str</span></code>, default:
-                      <code>None</code>
-)
-              –
-              <div class="doc-md-description">
-                <p>If provided, only right out to this endpoint sheet. Defaults to None.</p>
-              </div>
-            </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
     </div>
 
@@ -224,8 +296,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../schedule_summary_methods/" class="btn btn-neutral float-left" title="Schedule Summary Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../intake_methods/" class="btn btn-neutral float-right" title="Intake Methods">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../quotas_methods/" class="btn btn-neutral float-left" title="Quotas Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -248,10 +319,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../schedule_summary_methods/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../quotas_methods/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../intake_methods/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

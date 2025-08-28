@@ -55,6 +55,24 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clean-data">Clean Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.SharedTransformations._clean_data">_clean_data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clean-calendar">Clean Calendar</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.SharedTransformations._clean_calendar">_clean_calendar</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#merge-calendar">Merge Calendar</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.SharedTransformations._merge_calendar">_merge_calendar</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#custom-method">Custom Method</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.SharedTransformations._custom_method">_custom_method</a>
@@ -66,6 +84,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../schedule_summary_methods/">Schedule Summary Methods</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../quotas_methods/">Quotas Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intake_methods/">Intake Methods</a>
                   </li>
               </ul>
       </div>
@@ -168,6 +188,213 @@
     </div>
 
 </div><pre><code>Aliases: concat_data
+</code></pre>
+<p><br></p>
+<h2 id="clean-data">Clean Data<a class="headerlink" href="#clean-data" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.SharedTransformations._clean_data"></a>
+    <div class="doc doc-contents first">
+
+        <p>Clean up a dataframe according to user parameters.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>blacklist_filter</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary of column and blacklisted entries to filter out. Defaults to None.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>whitelist_filter</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary of column and whitelisted entries to keep. Defaults to None.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>map_date_col</code></b>
+                  (<code><span title="string">string</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Output column name for datetime mapped date strings. If None, skip this step. Defaults to None.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>projected_col</code></b>
+                  (<code><span title="string">string</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Output column name for boolean flag about ongoing or future appointments. If None, skip this step. Defaults to None.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>projected_whitelist</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Additional columns (keys) and list of whitelisted terms (value) to use for projected column. If None, skip this step. Defaults to None.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: clean_data
+</code></pre>
+<p><br></p>
+<h2 id="clean-calendar">Clean Calendar<a class="headerlink" href="#clean-calendar" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.SharedTransformations._clean_calendar"></a>
+    <div class="doc doc-contents first">
+
+
+    </div>
+
+</div><pre><code>Aliases: clean_calendar_data
+</code></pre>
+<p><br></p>
+<h2 id="merge-calendar">Merge Calendar<a class="headerlink" href="#merge-calendar" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.SharedTransformations._merge_calendar"></a>
+    <div class="doc doc-contents first">
+
+        <p>Merge calendar data into another data source.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>accumulator_source</code></b>
+                  (<code><span title="string">string</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from (this is the dataframe that will have calendar data added to it)
+                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
+                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>var_name</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>&#39;Date&#39;</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>New column name made from the melted calendar. Defaults to 'Date'.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>value_name</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>&#39;Unique ID&#39;</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Value name argument to pass to PD.melt. Defaults to 'Unique ID'.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="TypeError">TypeError</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If the user has references something that is neither a list of dataframes, or a dataframe, raise an error.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: merge_calendar_data
 </code></pre>
 <p><br></p>
 <h2 id="custom-method">Custom Method<a class="headerlink" href="#custom-method" title="Permanent link">&para;</a></h2>
