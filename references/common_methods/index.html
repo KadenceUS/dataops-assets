@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Common Methods - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Common Methods";
+        var mkdocs_page_input_path = "references/common_methods.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/ProjectOverview/">Project Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Transformation References</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../shared_methods/">Shared Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../schedule_summary_methods/">Schedule Summary Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quotas_methods/">Quotas Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intake_methods/">Intake Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calendar_methods/">Calendars Methods</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Common Methods</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#get-datetimes-and-timezones">Get datetimes and timezones</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_methodsdefine_times">common_methods.define_times</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.define_times">define_times</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#check-if-nested-key-exists">Check if nested key exists</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_methodsnested_key_exists">common_methods.nested_key_exists</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.nested_key_exists">nested_key_exists</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#extract-data-using-a1-notation">Extract data using A1 notation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_methodsget_a1_range_from_data">common_methods.get_a1_range_from_data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.get_a1_range_from_data">get_a1_range_from_data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grab-data-from-project-data-dictionaries">Grab data from project data dictionaries</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_methodsget_data">common_methods.get_data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.get_data">get_data</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Transformation References</li>
+      <li class="breadcrumb-item active">Common Methods</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="common-methods">Common Methods<a class="headerlink" href="#common-methods" title="Permanent link">&para;</a></h1>
+<h2 id="get-datetimes-and-timezones">Get datetimes and timezones<a class="headerlink" href="#get-datetimes-and-timezones" title="Permanent link">&para;</a></h2>
+<h3 id="common_methodsdefine_times">common_methods.define_times<a class="headerlink" href="#common_methodsdefine_times" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.define_times"></a>
+    <div class="doc doc-contents first">
+
+        <p>Generate region and timestamp objects to be used during runtime.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>tz_location</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Region string.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>test_date</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Test date string to be used as 'today'. Defaults to None.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>tuple</code></b>              –
+              <div class="doc-md-description">
+                <p>Timezone object, today object, today string, and timezone offset</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; tz_location='America/Los_Angeles'
+
+    Sets timezone location as west-coast.
+</code></pre>
+
+
+    </div>
+
+</div><p><br></p>
+<h2 id="check-if-nested-key-exists">Check if nested key exists<a class="headerlink" href="#check-if-nested-key-exists" title="Permanent link">&para;</a></h2>
+<h3 id="common_methodsnested_key_exists">common_methods.nested_key_exists<a class="headerlink" href="#common_methodsnested_key_exists" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.nested_key_exists"></a>
+    <div class="doc doc-contents first">
+
+        <p>Checks if a nested series of keys exists within a dictionary.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>d</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary to check within.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>keys</code></b>
+                  (<code><span title="list">list</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>List of keys to check if exist in 'd'.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>bool</code></b>              –
+              <div class="doc-md-description">
+                <p>If found, returns True. If not, False.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; d={'0':{'1':{'2':'Hello World'}}}
+&gt;&gt;&gt; nested_key_exists(d,['0','1','2']) -&gt; True
+&gt;&gt;&gt; nested_key_exists(d,['0','1','a']) -&gt; False
+</code></pre>
+
+
+    </div>
+
+</div><p><br></p>
+<h2 id="extract-data-using-a1-notation">Extract data using A1 notation<a class="headerlink" href="#extract-data-using-a1-notation" title="Permanent link">&para;</a></h2>
+<h3 id="common_methodsget_a1_range_from_data">common_methods.get_a1_range_from_data<a class="headerlink" href="#common_methodsget_a1_range_from_data" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.get_a1_range_from_data"></a>
+    <div class="doc doc-contents first">
+
+        <p>Extract a rectangular range from already-fetched sheet data
+using A1 notation (e.g., 'A2:B6').</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data</code></b>
+                  (<code>list of lists</code>)
+              –
+              <div class="doc-md-description">
+                <p>2D list of sheet values.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>a1_range</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>A1 range string like 'A2:B6'.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              –
+              <div class="doc-md-description">
+                <p>list of lists: Sliced values from data.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data=
+&gt;&gt;&gt; [[0,1,2,3]]
+&gt;&gt;&gt; [[4,5,6,7]]
+&gt;&gt;&gt; [[8,9,10,11]]
+&gt;&gt;&gt; [[12,13,14,15]]
+&gt;&gt;&gt; get_a1_range_from_data(data,B2:C3) -&gt; [[5,6],[9,10]]
+</code></pre>
+
+
+    </div>
+
+</div><p><br></p>
+<h2 id="grab-data-from-project-data-dictionaries">Grab data from project data dictionaries<a class="headerlink" href="#grab-data-from-project-data-dictionaries" title="Permanent link">&para;</a></h2>
+<h3 id="common_methodsget_data">common_methods.get_data<a class="headerlink" href="#common_methodsget_data" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.get_data"></a>
+    <div class="doc doc-contents first">
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>raw_data_ref</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>data_dict</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary containing data. </p>
+              </div>
+            </li>
+            <li>
+              <b><code>variables</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Secondary dictionary to look within. This one is only accessed if the raw_data_ref refers to Transformations.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>return_keys</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>False</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Return the nested list of keys that the data resides within. Defaults to False.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="IndexError">IndexError</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If the user requests an element from the raw_data_ref, this assumes an iterable object type. If it isnt actually a list, raise an error.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>mixed</code></b>              –
+              <div class="doc-md-description">
+                <p>Returns the object requested</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
+
+    Import Data Entry sheets from the extract step.
+
+&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
+
+    Import extracted data for source Lucious 6 with key 'Data Entry'.
+
+&gt;&gt;&gt; data_source = "Transformations.2"
+
+    Import results from the second transformation step.
+</code></pre>
+
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../calendar_methods/" class="btn btn-neutral float-left" title="Calendars Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../calendar_methods/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

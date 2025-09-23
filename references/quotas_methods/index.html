@@ -53,14 +53,10 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Quotas Methods</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#make-quota-bins">Make Quota Bins</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.QuotasTransform._make_quota_bins">_make_quota_bins</a>
-    </li>
-        </ul>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#stash-data-for-write-out">Stash data for write out</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quotastransform_stash_data">QuotasTransform._stash_data</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.QuotasTransform._stash_data">_stash_data</a>
     </li>
         </ul>
@@ -68,6 +64,10 @@
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../intake_methods/">Intake Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calendar_methods/">Calendars Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_methods/">Common Methods</a>
                   </li>
               </ul>
       </div>
@@ -95,51 +95,9 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="quotas-methods">Quotas Methods<a class="headerlink" href="#quotas-methods" title="Permanent link">&para;</a></h1>
-<h2 id="make-quota-bins">Make Quota Bins<a class="headerlink" href="#make-quota-bins" title="Permanent link">&para;</a></h2>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<a id="_coreutils.ETL.transform.QuotasTransform._make_quota_bins"></a>
-    <div class="doc doc-contents first">
-
-        <p>Make new binned columns for quotas tabulation. Uses the data_parameters dictionary that is read in as part of general config load in main.py.</p>
-
-
-<table class="field-list">
-  <colgroup>
-    <col class="field-name" />
-    <col class="field-body" />
-  </colgroup>
-  <tbody valign="top">
-    <tr class="field">
-      <th class="field-name">Parameters:</th>
-      <td class="field-body">
-        <ul class="first simple">
-            <li>
-              <b><code>data_source</code></b>
-                  (<code><span title="string">string</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>String that denotes where to pull data from.
-                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
-                    'Transformations.2` would mean to take the results from the second transformation step.</p>
-              </div>
-            </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-    </div>
-
-</div><pre><code>Aliases: make_quota_bins
-</code></pre>
 <p><br></p>
 <h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
+<h3 id="quotastransform_stash_data">QuotasTransform._stash_data<a class="headerlink" href="#quotastransform_stash_data" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
@@ -167,9 +125,7 @@
                   (<code><span title="string">string</span></code>)
               –
               <div class="doc-md-description">
-                <p>String that denotes where to pull data from.
-                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
-                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+                <p>String that denotes where to pull data from.</p>
               </div>
             </li>
             <li>
@@ -215,6 +171,23 @@
     </tr>
   </tbody>
 </table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
+
+    Import Data Entry sheets from the extract step.
+
+&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
+
+    Import extracted data for source Lucious 6 with key 'Data Entry'.
+
+&gt;&gt;&gt; data_source = "Transformations.2"
+
+    Import results from the second transformation step.
+</code></pre>
+
 
     </div>
 

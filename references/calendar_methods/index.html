@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Intake Methods - My Docs</title>
+    <title>Calendars Methods - My Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Intake Methods";
-        var mkdocs_page_input_path = "references/intake_methods.md";
+        var mkdocs_page_name = "Calendars Methods";
+        var mkdocs_page_input_path = "references/calendar_methods.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -53,59 +53,67 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../quotas_methods/">Quotas Methods</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Intake Methods</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../intake_methods/">Intake Methods</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Calendars Methods</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#filter-data-by-date">Filter data by date</a>
+    <li class="toctree-l2"><a class="reference internal" href="#use-timestamps-to-update-schedule-status">Use timestamps to update schedule status</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#intaketransform_filter_data_on_datetime">IntakeTransform._filter_data_on_datetime</a>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_add_schedule_cancel_dob">CalendarTransform._add_schedule_cancel_dob</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._filter_data_on_datetime">_filter_data_on_datetime</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._add_schedule_cancel_dob">_add_schedule_cancel_dob</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#clean-project-specific-columns">Clean project specific columns</a>
+    <li class="toctree-l2"><a class="reference internal" href="#prepare-remaining-and-target-data-for-analysis">Prepare remaining and target data for analysis</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#intaketransform_prepare_project_cols">IntakeTransform._prepare_project_cols</a>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_collect_remaining_targets">CalendarTransform._collect_remaining_targets</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._prepare_project_cols">_prepare_project_cols</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._collect_remaining_targets">_collect_remaining_targets</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#find-intake-insertion-row">Find intake insertion row</a>
+    <li class="toctree-l2"><a class="reference internal" href="#merge-intake-to-data-entry-on-id">Merge intake to data entry on ID</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#intaketransform_calculate_last_intake_row">IntakeTransform._calculate_last_intake_row</a>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_merge_intake_to_another_df_via_col">CalendarTransform._merge_intake_to_another_df_via_col</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._calculate_last_intake_row">_calculate_last_intake_row</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._merge_intake_to_another_df_via_col">_merge_intake_to_another_df_via_col</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#update-the-view-of-todays-intake-data">Update the view of todays intake data</a>
+    <li class="toctree-l2"><a class="reference internal" href="#use-merged-id-data-to-update-data-entry">Use merged id data to update data entry</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#intaketransform_update_today_view">IntakeTransform._update_today_view</a>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_intake_status_to_accumulator">CalendarTransform._intake_status_to_accumulator</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._update_today_view">_update_today_view</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._intake_status_to_accumulator">_intake_status_to_accumulator</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#backfill-main-intake-data-using-todays-view">Backfill main intake data using todays view</a>
+    <li class="toctree-l2"><a class="reference internal" href="#get-counts-of-subjects">Get counts of subjects</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#intaketransform_vector_backfill_intake_today">IntakeTransform._vector_backfill_intake_today</a>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_get_counts_from_status">CalendarTransform._get_counts_from_status</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._vector_backfill_intake_today">_vector_backfill_intake_today</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._get_counts_from_status">_get_counts_from_status</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clean-data-based-on-ids">Clean data based on IDS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_clean_kadence_ids_by_visit_number">CalendarTransform._clean_kadence_ids_by_visit_number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._clean_kadence_ids_by_visit_number">_clean_kadence_ids_by_visit_number</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#stash-data-for-write-out">Stash data for write out</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#intaketransform_stash_data">IntakeTransform._stash_data</a>
+    <li class="toctree-l3"><a class="reference internal" href="#calendartransform_stash_data">CalendarTransform._stash_data</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.IntakeTransform._stash_data">_stash_data</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.CalendarTransform._stash_data">_stash_data</a>
     </li>
         </ul>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../calendar_methods/">Calendars Methods</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../common_methods/">Common Methods</a>
                   </li>
@@ -125,7 +133,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Transformation References</li>
-      <li class="breadcrumb-item active">Intake Methods</li>
+      <li class="breadcrumb-item active">Calendars Methods</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -134,19 +142,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="intake-methods">Intake Methods<a class="headerlink" href="#intake-methods" title="Permanent link">&para;</a></h1>
-<h2 id="filter-data-by-date">Filter data by date<a class="headerlink" href="#filter-data-by-date" title="Permanent link">&para;</a></h2>
-<h3 id="intaketransform_filter_data_on_datetime">IntakeTransform._filter_data_on_datetime<a class="headerlink" href="#intaketransform_filter_data_on_datetime" title="Permanent link">&para;</a></h3>
+                <h1 id="calendars-methods">Calendars Methods<a class="headerlink" href="#calendars-methods" title="Permanent link">&para;</a></h1>
+<h2 id="use-timestamps-to-update-schedule-status">Use timestamps to update schedule status<a class="headerlink" href="#use-timestamps-to-update-schedule-status" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_add_schedule_cancel_dob">CalendarTransform._add_schedule_cancel_dob<a class="headerlink" href="#calendartransform_add_schedule_cancel_dob" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
 
 
 
-<a id="_coreutils.ETL.transform.IntakeTransform._filter_data_on_datetime"></a>
+<a id="_coreutils.ETL.transform.CalendarTransform._add_schedule_cancel_dob"></a>
     <div class="doc doc-contents first">
 
-        <p>Filter data on a given data time value. </p>
+        <p>Add boolean flags for schedule and cancelled status. Also calculate age using the date and DOB timestamps.</p>
 
 
 <table class="field-list">
@@ -165,103 +173,6 @@
               –
               <div class="doc-md-description">
                 <p>String that denotes where to pull data from.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>filter</code></b>
-                  (<code><span title="dict">dict</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>Dictionary containing the filter information for date restriction. 
-            The expected format is a dictionary with keys ['filter_col','operator','filter_date'].</p>
-              </div>
-            </li>
-            <li>
-              <b><code>map_date_col</code></b>
-                  (<code><span title="str">str</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>Name of the column to add the datetime object to.</p>
-              </div>
-            </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<p><span class="doc-section-title">Examples:</span></p>
-    
-        <hr />
-<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
-
-    Import Data Entry sheets from the extract step.
-
-&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
-
-    Import extracted data for source Lucious 6 with key 'Data Entry'.
-
-&gt;&gt;&gt; data_source = "Transformations.2"
-
-    Import results from the second transformation step.
-
-&gt;&gt;&gt; filter = {'filter_col':'map_date_col','operator':'==','filter_date':'today'}
-
-    Filter data on map_date_col where it is equal to todays date.
-
-    More generally:
-
-        filter_col (str): Column name to use for filtering. Typically the same as `map_date_col`.
-
-        operator (str): String representation of a python logic operator ('==','&lt;',etc.)
-
-        filter_date (datetime or string*): Date time object or the string 'today', which will infer the current day time object
-</code></pre>
-
-
-    </div>
-
-</div><pre><code>Aliases: filter_by_date
-</code></pre>
-<p><br></p>
-<h2 id="clean-project-specific-columns">Clean project specific columns<a class="headerlink" href="#clean-project-specific-columns" title="Permanent link">&para;</a></h2>
-<h3 id="intaketransform_prepare_project_cols">IntakeTransform._prepare_project_cols<a class="headerlink" href="#intaketransform_prepare_project_cols" title="Permanent link">&para;</a></h3>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<a id="_coreutils.ETL.transform.IntakeTransform._prepare_project_cols"></a>
-    <div class="doc doc-contents first">
-
-        <p>Perform any method mapping of columns and typecasting before intake analysis.</p>
-
-
-<table class="field-list">
-  <colgroup>
-    <col class="field-name" />
-    <col class="field-body" />
-  </colgroup>
-  <tbody valign="top">
-    <tr class="field">
-      <th class="field-name">Parameters:</th>
-      <td class="field-body">
-        <ul class="first simple">
-            <li>
-              <b><code>data_source</code></b>
-                  (<code><span title="string">string</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>String that denotes where to pull data from.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>type_castings</code></b>
-                  (<code><span title="dict">dict</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>Dictionary with columns (keys) and data types (values) to try to map to.</p>
               </div>
             </li>
         </ul>
@@ -289,21 +200,23 @@
 
     </div>
 
-</div><pre><code>Aliases: clean_project_cols
+</div><pre><code>Aliases: timestamp_derived_columns
 </code></pre>
 <p><br></p>
-<h2 id="find-intake-insertion-row">Find intake insertion row<a class="headerlink" href="#find-intake-insertion-row" title="Permanent link">&para;</a></h2>
-<h3 id="intaketransform_calculate_last_intake_row">IntakeTransform._calculate_last_intake_row<a class="headerlink" href="#intaketransform_calculate_last_intake_row" title="Permanent link">&para;</a></h3>
+<h2 id="prepare-remaining-and-target-data-for-analysis">Prepare remaining and target data for analysis<a class="headerlink" href="#prepare-remaining-and-target-data-for-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_collect_remaining_targets">CalendarTransform._collect_remaining_targets<a class="headerlink" href="#calendartransform_collect_remaining_targets" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
 
 
 
-<a id="_coreutils.ETL.transform.IntakeTransform._calculate_last_intake_row"></a>
+<a id="_coreutils.ETL.transform.CalendarTransform._collect_remaining_targets"></a>
     <div class="doc doc-contents first">
 
-        <p>Use built-in dataframe methods to infer the last index of valid data in intake so we can insert at the end of the spreadsheet.</p>
+        <p>Looks for any remaining or target dataframes extracted from source. This step brings it into memory for the transformation process, and
+collects remaining and target into respective dictionaries for easier access.
+Results for this step are saved as a list with remaining data in element 0, and targets in element 1.</p>
 
 
 <table class="field-list">
@@ -317,121 +230,23 @@
       <td class="field-body">
         <ul class="first simple">
             <li>
-              <b><code>data_source</code></b>
-                  (<code><span title="string">string</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>String that denotes where to pull data from.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>col_subset</code></b>
-                  (<code><span title="list">list</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>List of columns to check for valid entries.</p>
-              </div>
-            </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<p><span class="doc-section-title">Examples:</span></p>
-    
-        <hr />
-<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
-
-    Import Data Entry sheets from the extract step.
-
-&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
-
-    Import extracted data for source Lucious 6 with key 'Data Entry'.
-
-&gt;&gt;&gt; data_source = "Transformations.2"
-
-    Import results from the second transformation step.
-</code></pre>
-
-
-    </div>
-
-</div><pre><code>Aliases: intake_geometry
-</code></pre>
-<p><br></p>
-<h2 id="update-the-view-of-todays-intake-data">Update the view of todays intake data<a class="headerlink" href="#update-the-view-of-todays-intake-data" title="Permanent link">&para;</a></h2>
-<h3 id="intaketransform_update_today_view">IntakeTransform._update_today_view<a class="headerlink" href="#intaketransform_update_today_view" title="Permanent link">&para;</a></h3>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<a id="_coreutils.ETL.transform.IntakeTransform._update_today_view"></a>
-    <div class="doc doc-contents first">
-
-        <p>Update todays view of data with mapped start time, date, appointment time, Amount Overtime, and participant type.</p>
-
-
-<table class="field-list">
-  <colgroup>
-    <col class="field-name" />
-    <col class="field-body" />
-  </colgroup>
-  <tbody valign="top">
-    <tr class="field">
-      <th class="field-name">Parameters:</th>
-      <td class="field-body">
-        <ul class="first simple">
-            <li>
-              <b><code>data_source</code></b>
-                  (<code><span title="str">str</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>String that denotes where to pull data from.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>today_source</code></b>
-                  (<code><span title="str">str</span></code>)
-              –
-              <div class="doc-md-description">
-                <p>String that denotes where to pull todays data from.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>duration_cols</code></b>
-                  (<code><span title="list">list</span></code>, default:
-                      <code>[&#39;Duration&#39;, &#39;Appt. Duration&#39;]</code>
-)
-              –
-              <div class="doc-md-description">
-                <p>List of the actual duration column name, and the scheduled appoint duration column name. Used to get overflow. Defaults to ['Duration','Appt. Duration'].</p>
-              </div>
-            </li>
-            <li>
-              <b><code>status_col</code></b>
+              <b><code>remaining_label</code></b>
                   (<code><span title="str">str</span></code>, default:
-                      <code>&#39;Status Subtype&#39;</code>
+                      <code>&#39;Remaining&#39;</code>
 )
               –
               <div class="doc-md-description">
-                <p>Column name for the status subtype. Defaults to 'Status Subtype'.</p>
+                <p>Substring that denotes the name given to remaining data tables in the calendar configuration file. Defaults to 'Remaining'.</p>
               </div>
             </li>
             <li>
-              <b><code>mappings</code></b>
-                  (<code><span title="dict">dict</span></code>, default:
-                      <code>None</code>
+              <b><code>target_label</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>&#39;Target&#39;</code>
 )
               –
               <div class="doc-md-description">
-                <p>Dictionary with method names as keys, pointing to another dictionary.
-             This inner dictionary must have an 'outcol' key, which states the output column name to place the results into.
-             Any additional elements in the inner dictionary get converted into inputs for the requested method.
-             If only 'outcol' is provided, sends the entire row to the method.
-             Defaults to None.</p>
+                <p>Substring that denotes the name given to target data tables in the calendar configuration file.. Defaults to 'Target'.</p>
               </div>
             </li>
         </ul>
@@ -440,45 +255,24 @@
   </tbody>
 </table>
 
-<p><span class="doc-section-title">Examples:</span></p>
-    
-        <hr />
-<pre><code>&gt;&gt;&gt; data_source||today_source = "Extract.Data Entry"
-
-    Import Data Entry sheets from the extract step.
-
-&gt;&gt;&gt; data_source||today_source = "Extract.Lucious6.Data Entry"
-
-    Import extracted data for source Lucious 6 with key 'Data Entry'.
-
-&gt;&gt;&gt; data_source||today_source = "Transformations.2"
-
-    Import results from the second transformation step.
-
-&gt;&gt;&gt; mappings = {'common_methods.compute_bmi': {'outcol': 'BMI','height_col': "Height (in)",'weight_col': "Weight (lbs)"}}
-
-    Call the method common_methods.compute_bmi, pass the input arguments 'height_col' the column labeled 'Height (in)'.
-    Pass the input argument 'weight_col' the column name 'Weight (lbs)', and save results to 'BMI'.
-</code></pre>
-
-
     </div>
 
-</div><pre><code>Aliases: prepare_today_data
+</div><pre><code>Aliases: collect_remaining_targets
 </code></pre>
 <p><br></p>
-<h2 id="backfill-main-intake-data-using-todays-view">Backfill main intake data using todays view<a class="headerlink" href="#backfill-main-intake-data-using-todays-view" title="Permanent link">&para;</a></h2>
-<h3 id="intaketransform_vector_backfill_intake_today">IntakeTransform._vector_backfill_intake_today<a class="headerlink" href="#intaketransform_vector_backfill_intake_today" title="Permanent link">&para;</a></h3>
+<h2 id="merge-intake-to-data-entry-on-id">Merge intake to data entry on ID<a class="headerlink" href="#merge-intake-to-data-entry-on-id" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_merge_intake_to_another_df_via_col">CalendarTransform._merge_intake_to_another_df_via_col<a class="headerlink" href="#calendartransform_merge_intake_to_another_df_via_col" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
 
 
 
-<a id="_coreutils.ETL.transform.IntakeTransform._vector_backfill_intake_today"></a>
+<a id="_coreutils.ETL.transform.CalendarTransform._merge_intake_to_another_df_via_col"></a>
     <div class="doc doc-contents first">
 
-        <p>Vectorized backfill for the intake dataframe using 'today's entries from data entry as source.</p>
+        <p>This method merges the intake data to another dataframe, typically data entry, using user provided id columns.
+It also creates a 0-based index of each row within its group using .cumcount from pandas for the id columns.</p>
 
 
 <table class="field-list">
@@ -492,7 +286,7 @@
       <td class="field-body">
         <ul class="first simple">
             <li>
-              <b><code>intake_data_source</code></b>
+              <b><code>intake_source</code></b>
                   (<code><span title="str">str</span></code>)
               –
               <div class="doc-md-description">
@@ -500,37 +294,27 @@
               </div>
             </li>
             <li>
-              <b><code>today_source</code></b>
+              <b><code>accumulator_source</code></b>
                   (<code><span title="str">str</span></code>)
               –
               <div class="doc-md-description">
-                <p>String that denotes where to pull todays data from.</p>
+                <p>String that denotes where to pull data from that we wish to accumulate data onto.</p>
               </div>
             </li>
             <li>
-              <b><code>first_intake_heading</code></b>
+              <b><code>intake_id_col</code></b>
                   (<code><span title="str">str</span></code>)
               –
               <div class="doc-md-description">
-                <p>First intake heading column name. Used to infer geometry</p>
+                <p>Column name to merge on in the intake dataframe (i.e. 'Kadence ID')</p>
               </div>
             </li>
             <li>
-              <b><code>last_intake_heading</code></b>
+              <b><code>accumulator_id_col</code></b>
                   (<code><span title="str">str</span></code>)
               –
               <div class="doc-md-description">
-                <p>Last intake heading column name. Used to infer geometry.</p>
-              </div>
-            </li>
-            <li>
-              <b><code>id_cols</code></b>
-                  (<code><span title="list">list</span></code>, default:
-                      <code>[&#39;Name&#39;, &#39;Phone&#39;, &#39;Email&#39;]</code>
-)
-              –
-              <div class="doc-md-description">
-                <p>Column names used to determine a unique id subset. Defaults to ['Name','Phone','Email'].</p>
+                <p>Column name to merge on in the accumulator dataframe (i.e. 'ID')</p>
               </div>
             </li>
         </ul>
@@ -542,15 +326,15 @@
 <p><span class="doc-section-title">Examples:</span></p>
     
         <hr />
-<pre><code>&gt;&gt;&gt; data_source||today_source = "Extract.Data Entry"
+<pre><code>&gt;&gt;&gt; intake_source||accumulator_source = "Extract.Data Entry"
 
     Import Data Entry sheets from the extract step.
 
-&gt;&gt;&gt; data_source||today_source = "Extract.Lucious6.Data Entry"
+&gt;&gt;&gt; intake_source||accumulator_source = "Extract.Lucious6.Data Entry"
 
     Import extracted data for source Lucious 6 with key 'Data Entry'.
 
-&gt;&gt;&gt; data_source||today_source = "Transformations.2"
+&gt;&gt;&gt; intake_source||accumulator_source = "Transformations.2"
 
     Import results from the second transformation step.
 </code></pre>
@@ -558,18 +342,221 @@
 
     </div>
 
-</div><pre><code>Aliases: update_intake
+</div><pre><code>Aliases: merge_by_id
 </code></pre>
 <p><br></p>
-<h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
-<h3 id="intaketransform_stash_data">IntakeTransform._stash_data<a class="headerlink" href="#intaketransform_stash_data" title="Permanent link">&para;</a></h3>
+<h2 id="use-merged-id-data-to-update-data-entry">Use merged id data to update data entry<a class="headerlink" href="#use-merged-id-data-to-update-data-entry" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_intake_status_to_accumulator">CalendarTransform._intake_status_to_accumulator<a class="headerlink" href="#calendartransform_intake_status_to_accumulator" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
 
 
 
-<a id="_coreutils.ETL.transform.IntakeTransform._stash_data"></a>
+<a id="_coreutils.ETL.transform.CalendarTransform._intake_status_to_accumulator"></a>
+    <div class="doc doc-contents first">
+
+        <p>Use a merged intake and accumulator (typically data entry) to get the intake statuses.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>merged_source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Transformation step id that has the intake data merged with data entry.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>accumulator_source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Transformation or extraction data to update with intake statuses.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>accumulator_id_col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column name to merge on in the accumulator dataframe (i.e. 'ID')</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><pre><code>Aliases: merge_intake_status
+</code></pre>
+<p><br></p>
+<h2 id="get-counts-of-subjects">Get counts of subjects<a class="headerlink" href="#get-counts-of-subjects" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_get_counts_from_status">CalendarTransform._get_counts_from_status<a class="headerlink" href="#calendartransform_get_counts_from_status" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.CalendarTransform._get_counts_from_status"></a>
+    <div class="doc doc-contents first">
+
+        <p>Calculates the number of counts for a given data source (generally the intake status enriched data entry) for Unique IDs, Name, Email, and Phone. 
+Also looks for historical intake records and DNRs to make sure we get correct counts for this given study.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>dnr_source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull DNR data from.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>historical_intake_list</code></b>
+                  (<code><span title="list">list</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>List of strings that denotes where to pull data from.
+                    Defaults to None.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
+
+    Import Data Entry sheets from the extract step.
+
+&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
+
+    Import extracted data for source Lucious 6 with key 'Data Entry'.
+
+&gt;&gt;&gt; data_source = "Transformations.2"
+
+    Import results from the second transformation step.
+
+&gt;&gt;&gt; historical_intake_list = ["Extract.Lucious4.Data Entry","Extract.Lucious5.Data Entry"]
+
+    Import historical data from Lucious 4 and Lucious 5.
+</code></pre>
+
+
+    </div>
+
+</div><pre><code>Aliases: get_counts
+</code></pre>
+<p><br></p>
+<h2 id="clean-data-based-on-ids">Clean data based on IDS<a class="headerlink" href="#clean-data-based-on-ids" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_clean_kadence_ids_by_visit_number">CalendarTransform._clean_kadence_ids_by_visit_number<a class="headerlink" href="#calendartransform_clean_kadence_ids_by_visit_number" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.CalendarTransform._clean_kadence_ids_by_visit_number"></a>
+    <div class="doc doc-contents first">
+
+        <p>Clean up dataframe by kadence ids. Adds the cumulative counts for each name, then use common_methods.id_visit_formula to get the correct ID.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String that denotes where to pull data from.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
+
+    Import Data Entry sheets from the extract step.
+
+&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
+
+    Import extracted data for source Lucious 6 with key 'Data Entry'.
+
+&gt;&gt;&gt; data_source = "Transformations.2"
+
+    Import results from the second transformation step.
+</code></pre>
+
+
+    </div>
+
+</div><pre><code>Aliases: clean_ids
+</code></pre>
+<p><br></p>
+<h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
+<h3 id="calendartransform_stash_data">CalendarTransform._stash_data<a class="headerlink" href="#calendartransform_stash_data" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.ETL.transform.CalendarTransform._stash_data"></a>
     <div class="doc doc-contents first">
 
         <p>Stash data into parent class instance for load step.</p>
@@ -662,8 +649,8 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../quotas_methods/" class="btn btn-neutral float-left" title="Quotas Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../calendar_methods/" class="btn btn-neutral float-right" title="Calendars Methods">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../intake_methods/" class="btn btn-neutral float-left" title="Intake Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../common_methods/" class="btn btn-neutral float-right" title="Common Methods">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -686,10 +673,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../quotas_methods/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../intake_methods/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../calendar_methods/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../common_methods/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

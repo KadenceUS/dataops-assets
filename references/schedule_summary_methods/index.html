@@ -53,12 +53,16 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#apply-windowing-to-date-data">Apply Windowing to Date Data</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#schedulesummarytransform_make_windowed_schedule_summary">ScheduleSummaryTransform._make_windowed_schedule_summary</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.ScheduleSummaryTransform._make_windowed_schedule_summary">_make_windowed_schedule_summary</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#stash-data-for-write-out">Stash data for write out</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#schedulesummarytransform_stash_data">ScheduleSummaryTransform._stash_data</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.ETL.transform.ScheduleSummaryTransform._stash_data">_stash_data</a>
     </li>
         </ul>
@@ -68,6 +72,10 @@
                   <li class="toctree-l1"><a class="reference internal" href="../quotas_methods/">Quotas Methods</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../intake_methods/">Intake Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calendar_methods/">Calendars Methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_methods/">Common Methods</a>
                   </li>
               </ul>
       </div>
@@ -96,6 +104,7 @@
               
                 <h1 id="schedule-summary-methods">Schedule Summary Methods<a class="headerlink" href="#schedule-summary-methods" title="Permanent link">&para;</a></h1>
 <h2 id="apply-windowing-to-date-data">Apply Windowing to Date Data<a class="headerlink" href="#apply-windowing-to-date-data" title="Permanent link">&para;</a></h2>
+<h3 id="schedulesummarytransform_make_windowed_schedule_summary">ScheduleSummaryTransform._make_windowed_schedule_summary<a class="headerlink" href="#schedulesummarytransform_make_windowed_schedule_summary" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
@@ -123,9 +132,7 @@
                   (<code><span title="string">string</span></code>)
               –
               <div class="doc-md-description">
-                <p>String that denotes where to pull data from.
-                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
-                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+                <p>String that denotes where to pull data from.</p>
               </div>
             </li>
             <li>
@@ -144,12 +151,30 @@
   </tbody>
 </table>
 
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
+
+    Import Data Entry sheets from the extract step.
+
+&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
+
+    Import extracted data for source Lucious 6 with key 'Data Entry'.
+
+&gt;&gt;&gt; data_source = "Transformations.2"
+
+    Import results from the second transformation step.
+</code></pre>
+
+
     </div>
 
 </div><pre><code>Aliases: window_ScheduleSummary
 </code></pre>
 <p><br></p>
 <h2 id="stash-data-for-write-out">Stash data for write out<a class="headerlink" href="#stash-data-for-write-out" title="Permanent link">&para;</a></h2>
+<h3 id="schedulesummarytransform_stash_data">ScheduleSummaryTransform._stash_data<a class="headerlink" href="#schedulesummarytransform_stash_data" title="Permanent link">&para;</a></h3>
 
 
 <div class="doc doc-object doc-function">
@@ -177,9 +202,7 @@
                   (<code><span title="string">string</span></code>)
               –
               <div class="doc-md-description">
-                <p>String that denotes where to pull data from.
-                    <code>Extract.Data Entry</code> would look for any Data Entry sheets made in the extract step.
-                    'Transformations.2` would mean to take the results from the second transformation step.</p>
+                <p>String that denotes where to pull data from.</p>
               </div>
             </li>
             <li>
@@ -225,6 +248,23 @@
     </tr>
   </tbody>
 </table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+        <hr />
+<pre><code>&gt;&gt;&gt; data_source = "Extract.Data Entry"
+
+    Import Data Entry sheets from the extract step.
+
+&gt;&gt;&gt; data_source = "Extract.Lucious6.Data Entry"
+
+    Import extracted data for source Lucious 6 with key 'Data Entry'.
+
+&gt;&gt;&gt; data_source = "Transformations.2"
+
+    Import results from the second transformation step.
+</code></pre>
+
 
     </div>
 
