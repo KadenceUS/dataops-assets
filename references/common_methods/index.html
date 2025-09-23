@@ -91,6 +91,22 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#obtain-credentials-from-secrets-file">Obtain credentials from secrets file</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_methodsobtain_secrets">common_methods.obtain_secrets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.obtain_secrets">obtain_secrets</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build-a-nested-dictionary-path-and-store-data-there">Build a nested dictionary path and store data there</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_methodsbuild_dict_path">common_methods.build_dict_path</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.build_dict_path">build_dict_path</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -464,7 +480,7 @@ using A1 notation (e.g., 'A2:B6').</p>
             <li>
 <b><code>mixed</code></b>              –
               <div class="doc-md-description">
-                <p>Returns the object requested</p>
+                <p>Returns the object requested.</p>
               </div>
             </li>
         </ul>
@@ -489,6 +505,167 @@ using A1 notation (e.g., 'A2:B6').</p>
     Import results from the second transformation step.
 </code></pre>
 
+
+    </div>
+
+</div><p><br></p>
+<h2 id="obtain-credentials-from-secrets-file">Obtain credentials from secrets file<a class="headerlink" href="#obtain-credentials-from-secrets-file" title="Permanent link">&para;</a></h2>
+<h3 id="common_methodsobtain_secrets">common_methods.obtain_secrets<a class="headerlink" href="#common_methodsobtain_secrets" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.obtain_secrets"></a>
+    <div class="doc doc-contents first">
+
+        <p>Obtain secrets locally via a .env file, or using boto3 if running via lambda.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>key</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Secret key for the given region. Must be present in the .env file to work.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>env_path</code></b>
+                  (<code><span title="str">str</span> / <span title="filepath">filepath</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Path to local .env file.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>local_flag</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>True</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Flag for running code locally (True) versus on the cloud (False). Defaults to True.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>              –
+              <div class="doc-md-description">
+                <p>Dictionary with the credential information for accessing source data.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h2 id="build-a-nested-dictionary-path-and-store-data-there">Build a nested dictionary path and store data there<a class="headerlink" href="#build-a-nested-dictionary-path-and-store-data-there" title="Permanent link">&para;</a></h2>
+<h3 id="common_methodsbuild_dict_path">common_methods.build_dict_path<a class="headerlink" href="#common_methodsbuild_dict_path" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.build_dict_path"></a>
+    <div class="doc doc-contents first">
+
+        <p>Create a value in a dictionary, building the key path using input 'keys'.
+If key already has data, create a list of previous entries with new leaf appended to the end.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>base_dict</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary to add keys and leaf to.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>keys</code></b>
+                  (<code><span title="list">list</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>List of keys to add leaf object to.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>leaf_object</code></b>
+                  (<code><span title="any">any</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Any object in memory to be stored in the dictionary nested key.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>              –
+              <div class="doc-md-description">
+                <p>Dictionary with updated keys and values</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 
