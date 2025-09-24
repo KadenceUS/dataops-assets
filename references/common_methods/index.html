@@ -59,51 +59,171 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Common Methods</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#get-datetimes-and-timezones">Get datetimes and timezones</a>
+    <li class="toctree-l2"><a class="reference internal" href="#generic-methods">Generic Methods</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common_methodsdefine_times">common_methods.define_times</a>
+    <li class="toctree-l3"><a class="reference internal" href="#get-datetimes-and-timezones">Get datetimes and timezones</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.define_times">define_times</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#check-if-nested-key-exists">Check if nested key exists</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common_methodsnested_key_exists">common_methods.nested_key_exists</a>
+    <li class="toctree-l3"><a class="reference internal" href="#check-if-nested-key-exists">Check if nested key exists</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.nested_key_exists">nested_key_exists</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#extract-data-using-a1-notation">Extract data using A1 notation</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common_methodsget_a1_range_from_data">common_methods.get_a1_range_from_data</a>
+    <li class="toctree-l3"><a class="reference internal" href="#extract-data-using-a1-notation">Extract data using A1 notation</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.get_a1_range_from_data">get_a1_range_from_data</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#grab-data-from-project-data-dictionaries">Grab data from project data dictionaries</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common_methodsget_data">common_methods.get_data</a>
+    <li class="toctree-l3"><a class="reference internal" href="#grab-data-from-project-data-dictionaries">Grab data from project data dictionaries</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.get_data">get_data</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#obtain-credentials-from-secrets-file">Obtain credentials from secrets file</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common_methodsobtain_secrets">common_methods.obtain_secrets</a>
+    <li class="toctree-l3"><a class="reference internal" href="#obtain-credentials-from-secrets-file">Obtain credentials from secrets file</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.obtain_secrets">obtain_secrets</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#build-a-nested-dictionary-path-and-store-data-there">Build a nested dictionary path and store data there</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common_methodsbuild_dict_path">common_methods.build_dict_path</a>
+    <li class="toctree-l3"><a class="reference internal" href="#build-a-nested-dictionary-path-and-store-data-there">Build a nested dictionary path and store data there</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.build_dict_path">build_dict_path</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#find-nested-value-by-key-name">Find nested value by key-name</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.find_key_values">find_key_values</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-year-formatting">Get year formatting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.get_date_year_format">get_date_year_format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#coerce-datetime-format">Coerce datetime format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.coerce_datetime_format">coerce_datetime_format</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dataframe-manipulations">Dataframe Manipulations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-google-sheet-to-dataframe">Convert google sheet to dataframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.convert_data_to_dataframe">convert_data_to_dataframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-a1-format-data-from-google-to-dataframe">Convert A1 Format data from Google to dataframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.convert_a1data_to_dataframe">convert_a1data_to_dataframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ensure-boolean-typing-for-dataframe">Ensure boolean typing for dataframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.convert_bool_str_cols_to_bool">convert_bool_str_cols_to_bool</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filter-dataframe-by-dictionary">Filter dataframe by dictionary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods._filter_by_dict">_filter_by_dict</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#column-mapping">Column mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.apply_column_mapping">apply_column_mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#merge-columns-based-on-condition">Merge columns based on condition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.conditional_column_merge">conditional_column_merge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#return-multiindex">Return multiindex</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.multiindex_return">multiindex_return</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#replace-row-values-by-the-group-row-belongs-to">Replace row values by the group row belongs to</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods._replace_count_from_group_column">_replace_count_from_group_column</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mapping-methods">Mapping Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#perform-select-on-numeric-columns">Perform select on numeric columns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.select_mapping_numeric">select_mapping_numeric</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#perform-select-on-string-columns">Perform select on string columns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.select_mapping_string">select_mapping_string</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generic-select-method">Generic select method</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.select_mapping">select_mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#height-in-inches">Height in inches</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.height_convert">height_convert</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#title-each-word-useful-for-element-wise-lambda-calls">Title each word (useful for element wise lambda calls)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.capitalize_each_word">capitalize_each_word</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assign-timestamps-based-on-conditionals">Assign timestamps based on conditionals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.evaluate_flag_with_timestamp">evaluate_flag_with_timestamp</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integer-year-between-dates">Integer year between dates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.years_between">years_between</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#misc-kadence-methods">Misc Kadence Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#clean-up-name-fields">Clean up name fields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.clean_names">clean_names</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clean-up-name-fields_1">Clean up name fields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.clean_emails">clean_emails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clean-up-name-fields_2">Clean up name fields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.clean_phones">clean_phones</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#compute-bmi">Compute BMI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.compute_bmi">compute_bmi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#start-datetime-mapping">Start datetime mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.start_datetime_mapping">start_datetime_mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#format-timezone-offset-string">Format timezone offset string</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.format_offset">format_offset</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#find-last-intake-row">Find last intake row</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.last_intake_row">last_intake_row</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-intake-with-todays-data">Update intake with today's data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.conditional_fill_intake_today">conditional_fill_intake_today</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-the-neutral-group-count-denominator">Get the neutral group count denominator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.neutral_divide_denom">neutral_divide_denom</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-the-mobility-group-count-denominator">Get the mobility group count denominator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.mobility_divide_denom">mobility_divide_denom</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-status-subtype-based-on-condition">Get status subtype based on condition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.subtype_mapping">subtype_mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-the-costs-based-on-conditions">Get the costs based on conditions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.costs_mapping">costs_mapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-the-group-counts">Get the group counts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.process_counts">process_counts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-unique-ids">Get unique IDs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_coreutils.misc.common_methods.id_visit_formula">id_visit_formula</a>
     </li>
         </ul>
     </li>
@@ -135,8 +255,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="common-methods">Common Methods<a class="headerlink" href="#common-methods" title="Permanent link">&para;</a></h1>
-<h2 id="get-datetimes-and-timezones">Get datetimes and timezones<a class="headerlink" href="#get-datetimes-and-timezones" title="Permanent link">&para;</a></h2>
-<h3 id="common_methodsdefine_times">common_methods.define_times<a class="headerlink" href="#common_methodsdefine_times" title="Permanent link">&para;</a></h3>
+<h2 id="generic-methods">Generic Methods<a class="headerlink" href="#generic-methods" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="get-datetimes-and-timezones">Get datetimes and timezones<a class="headerlink" href="#get-datetimes-and-timezones" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsdefine_times">common_methods.define_times<a class="headerlink" href="#common_methodsdefine_times" title="Permanent link">&para;</a></h4>
 
 
 <div class="doc doc-object doc-function">
@@ -217,8 +339,8 @@
     </div>
 
 </div><p><br></p>
-<h2 id="check-if-nested-key-exists">Check if nested key exists<a class="headerlink" href="#check-if-nested-key-exists" title="Permanent link">&para;</a></h2>
-<h3 id="common_methodsnested_key_exists">common_methods.nested_key_exists<a class="headerlink" href="#common_methodsnested_key_exists" title="Permanent link">&para;</a></h3>
+<h3 id="check-if-nested-key-exists">Check if nested key exists<a class="headerlink" href="#check-if-nested-key-exists" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsnested_key_exists">common_methods.nested_key_exists<a class="headerlink" href="#common_methodsnested_key_exists" title="Permanent link">&para;</a></h4>
 
 
 <div class="doc doc-object doc-function">
@@ -297,8 +419,8 @@
     </div>
 
 </div><p><br></p>
-<h2 id="extract-data-using-a1-notation">Extract data using A1 notation<a class="headerlink" href="#extract-data-using-a1-notation" title="Permanent link">&para;</a></h2>
-<h3 id="common_methodsget_a1_range_from_data">common_methods.get_a1_range_from_data<a class="headerlink" href="#common_methodsget_a1_range_from_data" title="Permanent link">&para;</a></h3>
+<h3 id="extract-data-using-a1-notation">Extract data using A1 notation<a class="headerlink" href="#extract-data-using-a1-notation" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsget_a1_range_from_data">common_methods.get_a1_range_from_data<a class="headerlink" href="#common_methodsget_a1_range_from_data" title="Permanent link">&para;</a></h4>
 
 
 <div class="doc doc-object doc-function">
@@ -381,8 +503,8 @@ using A1 notation (e.g., 'A2:B6').</p>
     </div>
 
 </div><p><br></p>
-<h2 id="grab-data-from-project-data-dictionaries">Grab data from project data dictionaries<a class="headerlink" href="#grab-data-from-project-data-dictionaries" title="Permanent link">&para;</a></h2>
-<h3 id="common_methodsget_data">common_methods.get_data<a class="headerlink" href="#common_methodsget_data" title="Permanent link">&para;</a></h3>
+<h3 id="grab-data-from-project-data-dictionaries">Grab data from project data dictionaries<a class="headerlink" href="#grab-data-from-project-data-dictionaries" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsget_data">common_methods.get_data<a class="headerlink" href="#common_methodsget_data" title="Permanent link">&para;</a></h4>
 
 
 <div class="doc doc-object doc-function">
@@ -509,8 +631,8 @@ using A1 notation (e.g., 'A2:B6').</p>
     </div>
 
 </div><p><br></p>
-<h2 id="obtain-credentials-from-secrets-file">Obtain credentials from secrets file<a class="headerlink" href="#obtain-credentials-from-secrets-file" title="Permanent link">&para;</a></h2>
-<h3 id="common_methodsobtain_secrets">common_methods.obtain_secrets<a class="headerlink" href="#common_methodsobtain_secrets" title="Permanent link">&para;</a></h3>
+<h3 id="obtain-credentials-from-secrets-file">Obtain credentials from secrets file<a class="headerlink" href="#obtain-credentials-from-secrets-file" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsobtain_secrets">common_methods.obtain_secrets<a class="headerlink" href="#common_methodsobtain_secrets" title="Permanent link">&para;</a></h4>
 
 
 <div class="doc doc-object doc-function">
@@ -590,8 +712,8 @@ using A1 notation (e.g., 'A2:B6').</p>
     </div>
 
 </div><p><br></p>
-<h2 id="build-a-nested-dictionary-path-and-store-data-there">Build a nested dictionary path and store data there<a class="headerlink" href="#build-a-nested-dictionary-path-and-store-data-there" title="Permanent link">&para;</a></h2>
-<h3 id="common_methodsbuild_dict_path">common_methods.build_dict_path<a class="headerlink" href="#common_methodsbuild_dict_path" title="Permanent link">&para;</a></h3>
+<h3 id="build-a-nested-dictionary-path-and-store-data-there">Build a nested dictionary path and store data there<a class="headerlink" href="#build-a-nested-dictionary-path-and-store-data-there" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsbuild_dict_path">common_methods.build_dict_path<a class="headerlink" href="#common_methodsbuild_dict_path" title="Permanent link">&para;</a></h4>
 
 
 <div class="doc doc-object doc-function">
@@ -666,6 +788,2057 @@ If key already has data, create a list of previous entries with new leaf appende
     </tr>
   </tbody>
 </table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="find-nested-value-by-key-name">Find nested value by key-name<a class="headerlink" href="#find-nested-value-by-key-name" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsfind_key_values">common_methods.find_key_values<a class="headerlink" href="#common_methodsfind_key_values" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.find_key_values"></a>
+    <div class="doc doc-contents first">
+
+        <p>Return all values where the innermost key matches target_key.
+Supports wildcards (*, ?, etc.) using fnmatch.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary to search within.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>target_key</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String with search criteria for innermost key.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>tuple</code></b>              –
+              <div class="doc-md-description">
+                <p>Tuple of the data found at innermost key, and the path to the data.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-year-formatting">Get year formatting<a class="headerlink" href="#get-year-formatting" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsget_date_year_format">common_methods.get_date_year_format<a class="headerlink" href="#common_methodsget_date_year_format" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.get_date_year_format"></a>
+    <div class="doc doc-contents first">
+
+        <p>Infer the type of year formatting used within a particular column in a given dataframe.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe with a column that contains date data</p>
+              </div>
+            </li>
+            <li>
+              <b><code>col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column in the dataframe to to infer year formatting for.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="Exception">Exception</span></code>
+              –
+              <div class="doc-md-description">
+                <p>Exception is raised if no year formatting of any kind can be inferred.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              –
+              <div class="doc-md-description">
+                <p>string formatting: String formatting that lays out how the year is entered into the column (two or four digit format for now)</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="coerce-datetime-format">Coerce datetime format<a class="headerlink" href="#coerce-datetime-format" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodscoerce_datetime_format">common_methods.coerce_datetime_format<a class="headerlink" href="#common_methodscoerce_datetime_format" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.coerce_datetime_format"></a>
+    <div class="doc doc-contents first">
+
+        <p>Public method for attempting to coerce a date string into a date time object.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>date_string</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String format date time.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>datetime</code></b>              –
+              <div class="doc-md-description">
+                <p>Datetime object with proper formatting.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><h2 id="dataframe-manipulations">Dataframe Manipulations<a class="headerlink" href="#dataframe-manipulations" title="Permanent link">&para;</a></h2>
+<hr />
+<p><br></p>
+<h3 id="convert-google-sheet-to-dataframe">Convert google sheet to dataframe<a class="headerlink" href="#convert-google-sheet-to-dataframe" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsconvert_data_to_dataframe">common_methods.convert_data_to_dataframe<a class="headerlink" href="#common_methodsconvert_data_to_dataframe" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.convert_data_to_dataframe"></a>
+    <div class="doc doc-contents first">
+
+        <p>Return a dataframe of google batch data.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>raw_data</code></b>
+                  (<code><span title="list">list</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>List object with the raw spreadsheet data.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>header_row</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Row number of the column header. Base 1 to match google view.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>start_row</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Start row of the dataset. Base 1 to match google view.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="convert-a1-format-data-from-google-to-dataframe">Convert A1 Format data from Google to dataframe<a class="headerlink" href="#convert-a1-format-data-from-google-to-dataframe" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsconvert_a1data_to_dataframe">common_methods.convert_a1data_to_dataframe<a class="headerlink" href="#common_methodsconvert_a1data_to_dataframe" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.convert_a1data_to_dataframe"></a>
+    <div class="doc doc-contents first">
+
+        <p>Public method to return a dataframe of google batch data from A1 format.
+09/10/24: Currently expects list of lists, with first list being the column headers. First element of subsequent lists is index.
+          This is to allow quotas read in.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>raw_data</code></b>
+                  (<code><span title="list">list</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>List object with the raw spreadsheet data.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="ensure-boolean-typing-for-dataframe">Ensure boolean typing for dataframe<a class="headerlink" href="#ensure-boolean-typing-for-dataframe" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsconvert_bool_str_cols_to_bool">common_methods.convert_bool_str_cols_to_bool<a class="headerlink" href="#common_methodsconvert_bool_str_cols_to_bool" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.convert_bool_str_cols_to_bool"></a>
+    <div class="doc doc-contents first">
+
+        <p>Attempt to convert columns with only boolean string representations to actual bools.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe to coerce data types for.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dataframe</code></b>              –
+              <div class="doc-md-description">
+                <p>Dataframe with coerced bool type columns.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="filter-dataframe-by-dictionary">Filter dataframe by dictionary<a class="headerlink" href="#filter-dataframe-by-dictionary" title="Permanent link">&para;</a></h3>
+<h4 id="common_methods_filter_by_dict">common_methods._filter_by_dict<a class="headerlink" href="#common_methods_filter_by_dict" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods._filter_by_dict"></a>
+    <div class="doc doc-contents first">
+
+        <p>Use dictionary to perform a black/white list filter on the dataframe. Allows reuse by slightly different filters for different use cases.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe to perform blacklist filtering on</p>
+              </div>
+            </li>
+            <li>
+              <b><code>blacklist</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Filter of columns and values to reject</p>
+              </div>
+            </li>
+            <li>
+              <b><code>whitelist</code></b>
+                  (<code><span title="dict">dict</span></code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Filter of columns and values to allow through</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dataframe</code></b>              –
+              <div class="doc-md-description">
+                <p>Dataframe with applied filters.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="column-mapping">Column mapping<a class="headerlink" href="#column-mapping" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsapply_column_mapping">common_methods.apply_column_mapping<a class="headerlink" href="#common_methodsapply_column_mapping" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.apply_column_mapping"></a>
+    <div class="doc doc-contents first">
+
+        <p>Take a dataframe and a dictionary of mappings {(col_list_1):mapping_1,(col_list_2):mapping_2,etc} to map all columns.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>input dataframe to map</p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapping_config</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary with column sets as the keys, and the mapping to use as the values</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dataframe</code></b>              –
+              <div class="doc-md-description">
+                <p>Dataframe with new mappings</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="merge-columns-based-on-condition">Merge columns based on condition<a class="headerlink" href="#merge-columns-based-on-condition" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsconditional_column_merge">common_methods.conditional_column_merge<a class="headerlink" href="#common_methodsconditional_column_merge" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.conditional_column_merge"></a>
+    <div class="doc doc-contents first">
+
+        <p>Create a new column based on conditions in another column.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="pd.DataFrame">DataFrame</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Input dataframe.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>outcol</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Name of the output column to create.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>index_col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column to check conditions on (e.g., 'Gender').</p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapping</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary mapping index_col values to source columns.
+            Example: {"Male": "Male Height Group", "Female": "Female Height Group"}.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              –
+              <div class="doc-md-description">
+                <p>pd.DataFrame: DataFrame with the new column added.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="return-multiindex">Return multiindex<a class="headerlink" href="#return-multiindex" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsmultiindex_return">common_methods.multiindex_return<a class="headerlink" href="#common_methodsmultiindex_return" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.multiindex_return"></a>
+    <div class="doc doc-contents first">
+
+        <p>For a multi level indexed lookup dataframe, return the values according to what is seen in the row.
+Assumes the multi index lookup has index names the same as the columns in the row.
+For a single level index, perform a simple loc using the returned value from the row and index.name.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>row</code></b>
+                  (<code><span title="series">series</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Row from a dataframer</p>
+              </div>
+            </li>
+            <li>
+              <b><code>lookup_df</code></b>
+                  (<code><span title="Series">Series</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Multi-level indexed series</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>int</code></b>              –
+              <div class="doc-md-description">
+                <p>Value from the lookup table that matches the value seen in the row with the same column names as in the multi index.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="replace-row-values-by-the-group-row-belongs-to">Replace row values by the group row belongs to<a class="headerlink" href="#replace-row-values-by-the-group-row-belongs-to" title="Permanent link">&para;</a></h3>
+<h4 id="common_methods_replace_count_from_group_column">common_methods._replace_count_from_group_column<a class="headerlink" href="#common_methods_replace_count_from_group_column" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods._replace_count_from_group_column"></a>
+    <div class="doc doc-contents first">
+
+        <p>Use a groupby series result to map one column value to another. Allows filling of values not found in group by to a single output.
+NOTE: If you do not want a single output, you can use the fill_value as a mask to grab the original values from the first input column.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe to map columns within.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>group_count</code></b>
+                  (<code><span title="series">series</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Series with the group by statistics we want to map using.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>grpcol</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column that was grouped over and acts as our lookup</p>
+              </div>
+            </li>
+            <li>
+              <b><code>outcol</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Output column to place the grouped values within</p>
+              </div>
+            </li>
+            <li>
+              <b><code>fill_value</code></b>
+                  (<code><span title="int">int</span> / <span title="str">str</span></code>, default:
+                      <code>0</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Output to use if value in original column is not in the groupby series. Defaults to 0.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><h2 id="mapping-methods">Mapping Methods<a class="headerlink" href="#mapping-methods" title="Permanent link">&para;</a></h2>
+<hr />
+<p><br></p>
+<h3 id="perform-select-on-numeric-columns">Perform select on numeric columns<a class="headerlink" href="#perform-select-on-numeric-columns" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsselect_mapping_numeric">common_methods.select_mapping_numeric<a class="headerlink" href="#common_methodsselect_mapping_numeric" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.select_mapping_numeric"></a>
+    <div class="doc doc-contents first">
+
+        <p>Method for using select on data that should be numeric type. Calls common_methods.select_mapping.</p>
+<p>First replaces any missing data with '0', then convert to float, then send to the numpy select method.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe we are modifying</p>
+              </div>
+            </li>
+            <li>
+              <b><code>col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column we are using for our selections</p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapping</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dict containing the mapping data</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="perform-select-on-string-columns">Perform select on string columns<a class="headerlink" href="#perform-select-on-string-columns" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsselect_mapping_string">common_methods.select_mapping_string<a class="headerlink" href="#common_methodsselect_mapping_string" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.select_mapping_string"></a>
+    <div class="doc doc-contents first">
+
+        <p>Method for using select on data that should be string type. Calls common_methods.select_mapping.</p>
+<p>First replaces any missing data with '0', then lowers strings, then send to the numpy select method.</p>
+<p>Note: Use of '0' is to match legacy code.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe we are modifying</p>
+              </div>
+            </li>
+            <li>
+              <b><code>col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column we are using for our selections</p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapping</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dict containing the mapping data</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="generic-select-method">Generic select method<a class="headerlink" href="#generic-select-method" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsselect_mapping">common_methods.select_mapping<a class="headerlink" href="#common_methodsselect_mapping" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.select_mapping"></a>
+    <div class="doc doc-contents first">
+
+        <p>Perform a select on a given column in a dataframe, using user provided values and mappings.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe to perform select on</p>
+              </div>
+            </li>
+            <li>
+              <b><code>outcol</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column name to perform select on</p>
+              </div>
+            </li>
+            <li>
+              <b><code>vals</code></b>
+                  (<code><span title="series">series</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Series of values to use for the select statement</p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapping</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary with the mappings.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="height-in-inches">Height in inches<a class="headerlink" href="#height-in-inches" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsheight_convert">common_methods.height_convert<a class="headerlink" href="#common_methodsheight_convert" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.height_convert"></a>
+    <div class="doc doc-contents first">
+
+        <p>Element-wise conversion of a string height in US ft (') inch (") format to inches.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>height</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="title-each-word-useful-for-element-wise-lambda-calls">Title each word (useful for element wise lambda calls)<a class="headerlink" href="#title-each-word-useful-for-element-wise-lambda-calls" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodscapitalize_each_word">common_methods.capitalize_each_word<a class="headerlink" href="#common_methodscapitalize_each_word" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.capitalize_each_word"></a>
+    <div class="doc doc-contents first">
+
+        <p>Public method to return a string with each word capitalized.
+This is a method so we can use it in the data_parameters configuration file.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>x</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String to title.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>              –
+              <div class="doc-md-description">
+                <p>String with each word capitalized.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="assign-timestamps-based-on-conditionals">Assign timestamps based on conditionals<a class="headerlink" href="#assign-timestamps-based-on-conditionals" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsevaluate_flag_with_timestamp">common_methods.evaluate_flag_with_timestamp<a class="headerlink" href="#common_methodsevaluate_flag_with_timestamp" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.evaluate_flag_with_timestamp"></a>
+    <div class="doc doc-contents first">
+
+        <p>Generalized function to determine timestamp logic based on a flag value.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>timestamp_bool</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the timestamp was explicitly set ('TRUE')</p>
+              </div>
+            </li>
+            <li>
+              <b><code>timestamp</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>The actual timestamp value to return if set</p>
+              </div>
+            </li>
+            <li>
+              <b><code>flag_value</code></b>
+                  (<code><span title="Any">Any</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>A value to check for 'truthiness' (e.g. name or cancel flag)</p>
+              </div>
+            </li>
+            <li>
+              <b><code>timestamp_str</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Fallback timestamp if not explicitly set</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              –
+              <div class="doc-md-description">
+                <p>pd.Series: [Boolean or '', Timestamp or '']</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="integer-year-between-dates">Integer year between dates<a class="headerlink" href="#integer-year-between-dates" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsselect_mapping_1">common_methods.select_mapping<a class="headerlink" href="#common_methodsselect_mapping_1" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.years_between"></a>
+    <div class="doc doc-contents first">
+
+        <p>Gets the number of years between two dates, typically for birthdate to current.</p>
+<p>If unable to interpret either date, returns '''</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>birth_date</code></b>
+                  (<code><span title="datetime.datetime">datetime</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Datetime object with birth date/date 1.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>current_date</code></b>
+                  (<code><span title="datetime.datetime">datetime</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Datetime object with current date/date 2.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              –
+              <div class="doc-md-description">
+                <p>int/str: Floored integer year if calculable, otherwise ''.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><h2 id="misc-kadence-methods">Misc Kadence Methods<a class="headerlink" href="#misc-kadence-methods" title="Permanent link">&para;</a></h2>
+<hr />
+<p><br></p>
+<h3 id="clean-up-name-fields">Clean up name fields<a class="headerlink" href="#clean-up-name-fields" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsclean_names">common_methods.clean_names<a class="headerlink" href="#common_methodsclean_names" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.clean_names"></a>
+    <div class="doc doc-contents first">
+
+        <p>Clean up names in a dataframe. Port from original mappings.py</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>name_value</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Raw name value from kadence sheets.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>              –
+              <div class="doc-md-description">
+                <p>Cleaned name value.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="clean-up-name-fields_1">Clean up name fields<a class="headerlink" href="#clean-up-name-fields_1" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsclean_emails">common_methods.clean_emails<a class="headerlink" href="#common_methodsclean_emails" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.clean_emails"></a>
+    <div class="doc doc-contents first">
+
+        <p>Clean up emails in a dataframe. Port from original mappings.py</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>email_value</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Raw email value from kadence sheets.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>              –
+              <div class="doc-md-description">
+                <p>Cleaned email value.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="clean-up-name-fields_2">Clean up name fields<a class="headerlink" href="#clean-up-name-fields_2" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsclean_phones">common_methods.clean_phones<a class="headerlink" href="#common_methodsclean_phones" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.clean_phones"></a>
+    <div class="doc doc-contents first">
+
+        <p>Clean up phone numbers in a dataframe. Port from original mappings.py</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>phone</code></b>
+                  (<code>number_value (str</code>)
+              –
+              <div class="doc-md-description">
+                <p>Raw phone number value from kadence sheets.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>              –
+              <div class="doc-md-description">
+                <p>Cleaned phone number value.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="compute-bmi">Compute BMI<a class="headerlink" href="#compute-bmi" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodscompute_bmi">common_methods.compute_bmi<a class="headerlink" href="#common_methodscompute_bmi" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.compute_bmi"></a>
+    <div class="doc doc-contents first">
+
+        <p>Calculates the BMI from a given row's data, using the column label for height and weight.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>row</code></b>
+                  (<code><span title="series">series</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>A row from a dataframe with height and weight data in it.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>height_col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Name of the column that contains height data.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>weight_col</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Name of the column that contains weight data.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              –
+              <div class="doc-md-description">
+                <p>float/str: If calculable, the BMI for the row. Else empty string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="start-datetime-mapping">Start datetime mapping<a class="headerlink" href="#start-datetime-mapping" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsstart_datetime_mapping">common_methods.start_datetime_mapping<a class="headerlink" href="#common_methodsstart_datetime_mapping" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.start_datetime_mapping"></a>
+    <div class="doc doc-contents first">
+
+        <p>Map the start datetime. (Needs more information.)</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>date_string</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>time_string</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>tz_offset</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="format-timezone-offset-string">Format timezone offset string<a class="headerlink" href="#format-timezone-offset-string" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsformat_offset">common_methods.format_offset<a class="headerlink" href="#common_methodsformat_offset" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.format_offset"></a>
+    <div class="doc doc-contents first">
+
+        <p>Create time offset based on the timezone</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>tz_offset</code></b>
+                  (<code><span title="float">float</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Time offset based on current timezone.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>              –
+              <div class="doc-md-description">
+                <p>String with the formatted timezone offset</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="find-last-intake-row">Find last intake row<a class="headerlink" href="#find-last-intake-row" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodslast_intake_row">common_methods.last_intake_row<a class="headerlink" href="#common_methodslast_intake_row" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.last_intake_row"></a>
+    <div class="doc doc-contents first">
+
+        <p>Find the last row of an intake dataframe.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe containing intake data</p>
+              </div>
+            </li>
+            <li>
+              <b><code>col_subset</code></b>
+                  (<code>list of strs</code>)
+              –
+              <div class="doc-md-description">
+                <p>List of columns to use as the subset to determine last intake row.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>int</code></b>              –
+              <div class="doc-md-description">
+                <p>Index of the last intake row.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="update-intake-with-todays-data">Update intake with today's data<a class="headerlink" href="#update-intake-with-todays-data" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsconditional_fill_intake_today">common_methods.conditional_fill_intake_today<a class="headerlink" href="#common_methodsconditional_fill_intake_today" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.conditional_fill_intake_today"></a>
+    <div class="doc doc-contents first">
+
+        <p>Updates and intake dataframe to contain data from todays data entry/dataframe.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>intake_df</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Intake dataframe</p>
+              </div>
+            </li>
+            <li>
+              <b><code>df_today</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe with todays data to merge into intake</p>
+              </div>
+            </li>
+            <li>
+              <b><code>cols</code></b>
+                  (<code><span title="list">list</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Columns to merge on.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>today_str</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>String representation of todays date to filter intake on.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dataframe</code></b>              –
+              <div class="doc-md-description">
+                <p>Updated intake dataframe.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-the-neutral-group-count-denominator">Get the neutral group count denominator<a class="headerlink" href="#get-the-neutral-group-count-denominator" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsneutral_divide_denom">common_methods.neutral_divide_denom<a class="headerlink" href="#common_methodsneutral_divide_denom" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.neutral_divide_denom"></a>
+    <div class="doc doc-contents first">
+
+        <p>Divide the number of elements in a row by a pre-calculated denominator, returning 0 if no denominator was found.
+Added for Project Lucious 6.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>row_count</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Count of numnber of elements in a row.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>gender</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Gender we are looking up the denominator for in the dictionary.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>denom_dict</code></b>
+                  (<code><span title="dict">dict</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dictionary containing the denominators by gender</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>float</code></b>              –
+              <div class="doc-md-description">
+                <p>Row count divided by gender specific denom.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-the-mobility-group-count-denominator">Get the mobility group count denominator<a class="headerlink" href="#get-the-mobility-group-count-denominator" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsmobility_divide_denom">common_methods.mobility_divide_denom<a class="headerlink" href="#common_methodsmobility_divide_denom" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.mobility_divide_denom"></a>
+    <div class="doc doc-contents first">
+
+        <p>Divide row count by two for mobility measurements.
+Added for Project Lucious 6.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>row_count</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Count of numnber of elements in a row.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-status-subtype-based-on-condition">Get status subtype based on condition<a class="headerlink" href="#get-status-subtype-based-on-condition" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodssubtype_mapping">common_methods.subtype_mapping<a class="headerlink" href="#common_methodssubtype_mapping" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.subtype_mapping"></a>
+    <div class="doc doc-contents first">
+
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-the-costs-based-on-conditions">Get the costs based on conditions<a class="headerlink" href="#get-the-costs-based-on-conditions" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodscosts_mapping">common_methods.costs_mapping<a class="headerlink" href="#common_methodscosts_mapping" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.costs_mapping"></a>
+    <div class="doc doc-contents first">
+
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-the-group-counts">Get the group counts<a class="headerlink" href="#get-the-group-counts" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsprocess_counts">common_methods.process_counts<a class="headerlink" href="#common_methodsprocess_counts" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.process_counts"></a>
+    <div class="doc doc-contents first">
+
+
+    </div>
+
+</div><p><br></p>
+<h3 id="get-unique-ids">Get unique IDs<a class="headerlink" href="#get-unique-ids" title="Permanent link">&para;</a></h3>
+<h4 id="common_methodsid_visit_formula">common_methods.id_visit_formula<a class="headerlink" href="#common_methodsid_visit_formula" title="Permanent link">&para;</a></h4>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<a id="_coreutils.misc.common_methods.id_visit_formula"></a>
+    <div class="doc doc-contents first">
+
 
     </div>
 
