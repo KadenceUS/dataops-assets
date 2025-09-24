@@ -2786,6 +2786,86 @@ Added for Project Lucious 6.</p>
 <a id="_coreutils.misc.common_methods.subtype_mapping"></a>
     <div class="doc doc-contents first">
 
+        <p>Map the correct status subtype based on status.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>cancelled</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>status_subtype</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapped_date</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>indicator</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>today_object</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 
@@ -2801,6 +2881,78 @@ Added for Project Lucious 6.</p>
 <a id="_coreutils.misc.common_methods.costs_mapping"></a>
     <div class="doc doc-contents first">
 
+        <p>Map the costs based on status.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>cancelled</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>main_status</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>mapped_date</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>today_object</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 
@@ -2816,6 +2968,62 @@ Added for Project Lucious 6.</p>
 <a id="_coreutils.misc.common_methods.process_counts"></a>
     <div class="doc doc-contents first">
 
+        <p>Process the number of counts for a given attribute based on recruiter.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>attribute</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Column to group on</p>
+              </div>
+            </li>
+            <li>
+              <b><code>dataframe</code></b>
+                  (<code><span title="dataframe">dataframe</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe to perform counting on.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dataframe</code></b>              –
+              <div class="doc-md-description">
+                <p>Dataframe with group counts based on the attribute.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 
@@ -2831,6 +3039,78 @@ Added for Project Lucious 6.</p>
 <a id="_coreutils.misc.common_methods.id_visit_formula"></a>
     <div class="doc doc-contents first">
 
+        <p>Create a unique id based on the cumulative number of counts for the given name.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>base_id</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>cumulative_counts</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>name_value</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+            <li>
+              <b><code>names_lookup</code></b>
+                  (<code><span title="_type_">_type_</span></code>)
+              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>_type_</code></b>              –
+              <div class="doc-md-description">
+                <p><em>description</em></p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
     </div>
 
